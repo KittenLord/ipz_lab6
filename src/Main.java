@@ -4,20 +4,38 @@ import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
-        ICoordinateSpace cs1 = new CartesianSpace(1, 0.001);
-        ICoordinateSpace cs2 = new PolarSpace(1, 5);
+        ICoordinateSpace carts = new CartesianSpace(1, 1);
+        ICoordinateSpace polar = new PolarSpace(1, 1);
 
-        MathematicalFunction f = new MathematicalFunction(
+        MathematicalFunction f1 = new MathematicalFunction(
+            x -> x,
+            carts
+        );
+
+        MathematicalFunction f2 = new MathematicalFunction(
+            x -> Math.sin(x),
+            polar
+        );
+
+        MathematicalFunction f3 = new MathematicalFunction(
             x -> x*x*x,
-            cs1
+            carts
         );
 
-        MathematicalFunction fp = new MathematicalFunction(
-            phi -> phi,
-            cs2
+        MathematicalFunction f4 = new MathematicalFunction(
+            x -> x,
+            polar
         );
 
-        f.display();
-        fp.display();
+        MathematicalFunction f5 = new MathematicalFunction(
+            x -> Math.tan(x),
+            carts
+        );
+
+        f1.display();
+        f2.display();
+        f3.display();
+        f4.display();
+        f5.display();
     }
 }
