@@ -2,16 +2,35 @@ package work6;
 
 import java.lang.Math;
 
+/**
+ * The coordinate space that is polar
+ */
 public class PolarSpace implements ICoordinateSpace {
 
+    /**
+     * Multiplier for the radius
+     */
     private double rScale;
+
+    /**
+     * The number of periods to loop over
+     */
     private int periods;
 
+    /**
+     * The constructor for the polar coordinate space
+     * @param rScale The radius multiplier
+     * @param periods The amount of periods to iterate over
+     */ 
     public PolarSpace(double rScale, int periods) {
         this.rScale = rScale;
         this.periods = periods;
     }
 
+    /**
+     * The method to draw the function in polar coordinate space
+     * @param f The specified function
+     */
     public void drawFunction(MathematicalFunction f) {
         int width = 60;
         int height = 40;

@@ -1,15 +1,34 @@
 package work6;
 
+/**
+ * A coordinate space that is cartesian
+ */
 public class CartesianSpace implements ICoordinateSpace {
 
+    /**
+     * The multiplier for displayed x coordinate
+     */
     private double xScale;
+
+    /**
+     * The multiplier for displayed y coordinate
+     */
     private double yScale;
 
+    /**
+     * The constructor for the cartesian coordinate space
+     * @param xScale The x multiplier
+     * @param yScale The y multiplier
+     */
     public CartesianSpace(double xScale, double yScale) {
         this.xScale = xScale;
         this.yScale = yScale;
     }
 
+    /**
+     * A method to draw the function in the cartesian space
+     * @param f The specified function
+     */
     public void drawFunction(MathematicalFunction f) {
         int width = 60;
         int height = 40;

@@ -2,7 +2,15 @@ package work6;
 
 import java.lang.Math;
 
+/**
+ * The Main class that contains the main entry method
+ */
 public class Main {
+
+    /**
+     * The entry method
+     * @param args Program arguments
+     */
     public static void main(String[] args) {
         ICoordinateSpace carts = new CartesianSpace(1, 1);
         ICoordinateSpace polar = new PolarSpace(1, 1);
